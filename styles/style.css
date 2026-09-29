@@ -1,0 +1,106 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+:root{
+    --navy-950: hsl(233, 47%, 7%);
+    --blue-950: hsl(244, 37%, 16%);
+    --purple-500: hsl(277, 64%, 61%);
+    --main-heading: hsl(0, 0%, 100%);
+    --w-paragraph: hsla(0, 0%, 100%, 0.75);
+    --stat-headings: hsla(0, 0%, 100%, 0.6);
+}
+
+body{
+    background: var(--navy-950);
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    font-family: "Inter", sans-serif;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    min-height: 100vh;
+}
+#card{
+    display: flex;
+    background: var(--blue-950);
+    max-width: 1100px;
+    width: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+}
+.content{
+    width: 50%;
+    padding: 60px;
+}
+.content h1{
+    color: var(--main-heading);
+    font-size: 2.2rem;
+    line-height: 1.3;
+    margin-bottom: 25px;
+}
+.content span{
+    color: var(--purple-500);
+}
+.content p{
+    color: var(--w-paragraph);
+    line-height: 1.8;
+    margin-bottom: 50px;
+}
+.stats{
+    display: flex;
+    gap: 50px;
+}
+.stats  h3{
+    color: var(--stat-headings);
+    font-size: .75rem;
+    letter-spacing: 1px;
+}
+.img-unit{
+    width: 50%;
+    min-height: 446px;
+    background: linear-gradient(
+        hsla(277, 64%, 61%, 0.6),
+        hsla(277, 64%, 61%, 0.6)
+    ),
+    url(/assets/image-header-desktop.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.attribution{
+    margin-top: auto;
+    color: var(--stat-headings);
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: var(--w-paragraph);
+}
+
+@media (max-width: 768px){
+    body{
+        padding: 24px;
+    }
+    .card{
+        flex-direction: row;
+        max-width: 375px;
+        text-align: center;
+        border-radius: 6px;
+    }
+    .content{
+        padding: 40px 30px;
+    }
+    .stats{
+        flex-direction: column;
+        gap: 30px;
+    }
+    .img-unit{
+        width: 100%;
+        min-height: 240px;
+    }
+}
