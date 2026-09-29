@@ -67,40 +67,43 @@ body{
         hsla(277, 64%, 61%, 0.6),
         hsla(277, 64%, 61%, 0.6)
     ),
-    url(/assets/image-header-desktop.jpg);
+    url(../assets/image-header-desktop.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
-.attribution{
-    margin-top: auto;
-    color: var(--stat-headings);
-    font-size: 11px;
-    text-align: center;
-}
-.attribution a {
-    color: var(--w-paragraph);
-}
-
 @media (max-width: 768px){
     body{
         padding: 24px;
     }
-    .card{
-        flex-direction: row;
+    #card{
+        width: 100%;
+        flex-direction: column-reverse;
         max-width: 375px;
         text-align: center;
         border-radius: 6px;
     }
     .content{
+        width: 100%;
         padding: 40px 30px;
     }
     .stats{
         flex-direction: column;
+        text-align: center;
         gap: 30px;
     }
     .img-unit{
         width: 100%;
         min-height: 240px;
+          background:
+            linear-gradient(
+                hsla(277, 64%, 61%, 0.6),
+                hsla(277, 64%, 61%, 0.6)
+            ),
+            url("../assets/image-header-mobile.jpg");
+
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
     }
 }
